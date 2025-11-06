@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "email": "user@example.com",
+    "password": "$2a$10$examplehashedpasswordforuser",
+    "role": "user",
+    "name": "John Doe"
+  },
+  {
+    "id": 2,
+    "email": "admin@example.com",
+    "password": "$2a$10$examplehashedpasswordforadmin",
+    "role": "admin",
+    "name": "Admin User"
+  },
+  {
+    "id": 3,
+    "email": "pratapwarom@gmail.com",
+    "password": "$2b$10$YhNqsY1rmOTv6qEU1VfbZeLz090cmjNhLKnzRI.EZdI53piIH8uxK",
+    "role": "admin",
+    "name": "OM PRATAPWAR"
+  }
+]

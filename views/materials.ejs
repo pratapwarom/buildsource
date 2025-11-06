@@ -1,0 +1,35 @@
+<%- include('partials/head', { title: 'Materials' }) %>
+<%- include('partials/header') %>
+
+<section class="container">
+  <h1>Materials Marketplace</h1>
+  <p class="section-intro">Browse our comprehensive collection of construction materials from trusted vendors. All materials are quality-assured and available for immediate delivery.</p>
+
+  <div class="materials-grid">
+    <% materials.forEach(m => { %>
+      <div class="material-card">
+        <div class="material-image">
+          <img src="/assets/<%= m.image %>" alt="<%= m.name %>" />
+          <div class="availability-badge <%= m.availability.toLowerCase().replace(/ /g, '-') %>">
+            <%= m.availability %>
+          </div>
+        </div>
+        <div class="material-content">
+          <h3><%= m.name %></h3>
+          <p class="material-description"><%= m.description %></p>
+          <div class="material-meta">
+            <span class="category"><%= m.category %></span>
+            <span class="vendor">by <%= m.vendor %></span>
+          </div>
+          <div class="material-price">
+            <span class="price">₹<%= m.price %></span>
+            <span class="unit">/ <%= m.unit %></span>
+          </div>
+          <button class="btn" onclick="requestQuote(<%= m.id %>)">Request Quote</button>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

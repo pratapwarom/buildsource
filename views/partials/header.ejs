@@ -1,0 +1,38 @@
+<header class="site-header dark-header">
+  <div class="container header-inner">
+    <!-- Brand Logo -->
+    <a href="/" class="brand">
+      <img src="/assets/logo.png" alt="BuildSource Logo" class="logo" />
+      
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="main-nav" id="mainNav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/about" class="nav-link">About</a>
+      <a href="/services" class="nav-link">Services</a>
+      <a href="/projects" class="nav-link">Projects</a>
+      <a href="/materials" class="nav-link">Materials</a>
+      <a href="/pricing" class="nav-link">Pricing</a>
+      <% if (!locals.user) { %>
+        <a href="/signin" class="btn-outline">Sign In</a>
+      <% } else { %>
+        <span class="user-info">Welcome, <%= locals.user.name %> (<%= locals.user.role %>)</span>
+        <a href="/logout" class="btn-outline">Logout</a>
+      <% } %>
+      <a href="/contact" class="btn-outline">Contact</a>
+    </nav>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- Mobile Menu Button -->
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<main>

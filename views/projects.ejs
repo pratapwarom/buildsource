@@ -1,0 +1,29 @@
+<%- include('partials/head', { title: 'Projects' }) %>
+<%- include('partials/header') %>
+
+<section class="projects-section">
+  <div class="container">
+    <div class="section-header">
+      <h1>Our Projects</h1>
+      <p class="muted">A look at some of the construction and renovation work we've proudly completed.</p>
+    </div>
+
+    <div class="project-grid">
+      <% projects.forEach(p => { %>
+        <article class="project-card" data-aos="fade-up">
+          <div class="project-img">
+            <img src="<%= p.image %>" alt="<%= p.title %>" loading="lazy">
+            <span class="status <%= p.status.toLowerCase().replace(' ', '-') %>"><%= p.status %></span>
+          </div>
+          <div class="project-content">
+            <h3><%= p.title %></h3>
+            <p class="muted"><%= p.summary %></p>
+            <p class="budget">Budget: <strong><%= p.budget %></strong></p>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

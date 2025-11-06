@@ -1,0 +1,25 @@
+<%- include('partials/head', { title: 'Services' }) %>
+<%- include('partials/header') %>
+
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h1>Our Services</h1>
+      <p class="muted">From concept to completion — we deliver excellence in every project we undertake.</p>
+    </div>
+
+    <div class="service-grid">
+      <% services.forEach(s => { %>
+        <article class="service-card" data-aos="fade-up">
+          <div class="icon-circle">
+            <i class="fa-solid fa-helmet-safety"></i>
+          </div>
+          <h3><%= s.title %></h3>
+          <p><%= s.description %></p>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,29 @@
+<%- include('partials/head', { title: 'Home' }) %>
+<%- include('partials/header') %>
+
+<section class="container hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1>Build or Renovate with Confidence</h1>
+      <p class="muted">Source verified materials, hire vetted professionals, and manage your project—all in one place.</p>
+      <div class="hero-ctas">
+        <a href="/services" class="btn">Explore Services</a>
+        <a href="/materials" class="btn-outline">Materials Marketplace</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="/assets/hero.jpg" alt="Renovation scene" />
+    </div>
+  </div>
+</section>
+
+<section class="container solutions">
+  <h2>Why BuildSource</h2>
+  <div class="cards">
+    <article class="card"><h3>One Marketplace</h3><p>Compare prices & delivery times in a single view.</p></article>
+    <article class="card"><h3>Verified Pros</h3><p>Ratings, portfolios and background verification.</p></article>
+    <article class="card"><h3>Project Hub</h3><p>Shared timelines, budgets and chat history.</p></article>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

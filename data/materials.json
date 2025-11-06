@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "Cement 50kg",
+    "category": "Cement & Concrete",
+    "vendor": "BuildMart",
+    "price": 550,
+    "unit": "bag",
+    "availability": "In stock",
+    "image": "cement.jpg",
+    "description": "High-quality Portland cement suitable for all construction needs"
+  },
+  {
+    "id": 2,
+    "name": "Porcelain Tiles (Box)",
+    "category": "Tiles & Flooring",
+    "vendor": "TileHub",
+    "price": 1200,
+    "unit": "box",
+    "availability": "Limited stock",
+    "image": "tiles.jpg",
+    "description": "Elegant porcelain tiles with anti-slip properties"
+  },
+  {
+    "id": 3,
+    "name": "Premium Emulsion 10L",
+    "category": "Paints & Finishes",
+    "vendor": "ColorWorks",
+    "price": 2400,
+    "unit": "can",
+    "availability": "In stock",
+    "image": "paint.jpg",
+    "description": "Premium interior emulsion paint with excellent coverage and finish"
+  },
+  {
+    "id": 4,
+    "name": "Steel Reinforcement Bars",
+    "category": "Steel & Metal",
+    "vendor": "Tata Steel",
+    "price": 65,
+    "unit": "kg",
+    "availability": "In Stock",
+    "image": "materials.jpg",
+    "description": "High-strength TMT bars for reinforced concrete construction"
+  },
+  {
+    "id": 5,
+    "name": "River Sand",
+    "category": "Aggregates",
+    "vendor": "Local Quarry",
+    "price": 1200,
+    "unit": "cubic meter",
+    "availability": "In Stock",
+    "image": "riversand.png",
+    "description": "Clean river sand suitable for concrete mixing and plastering"
+  },
+  {
+    "id": 6,
+    "name": "Crushed Stone Aggregate",
+    "category": "Aggregates",
+    "vendor": "Local Quarry",
+    "price": 1800,
+    "unit": "cubic meter",
+    "availability": "In Stock",
+    "image": "materials.jpg",
+    "description": "20mm crushed stone aggregate for concrete and foundation work"
+  },
+  {
+    "id": 7,
+    "name": "Red Clay Bricks",
+    "category": "Bricks & Blocks",
+    "vendor": "Local Manufacturer",
+    "price": 8,
+    "unit": "piece",
+    "availability": "In Stock",
+    "image": "redclaybricks.png",
+    "description": "Standard red clay bricks for wall construction"
+  },
+  {
+    "id": 8,
+    "name": "Concrete Blocks",
+    "category": "Bricks & Blocks",
+    "vendor": "UltraTech",
+    "price": 45,
+    "unit": "piece",
+    "availability": "In Stock",
+    "image": "concreateblock.png",
+    "description": "Lightweight concrete blocks for faster construction"
+  },
+  {
+    "id": 9,
+    "name": "Wooden Doors",
+    "category": "Doors & Windows",
+    "vendor": "Local Carpenter",
+    "price": 8500,
+    "unit": "piece",
+    "availability": "Custom Order",
+    "image": "woodendoors.png",
+    "description": "Solid wood doors with modern design and hardware"
+  },
+  {
+    "id": 10,
+    "name": "Aluminum Windows",
+    "category": "Doors & Windows",
+    "vendor": "Hindustan Aluminum",
+    "price": 1200,
+    "unit": "sq ft",
+    "availability": "In Stock",
+    "image": "aluminiumwindows.png",
+    "description": "Energy-efficient aluminum windows with thermal break"
+  },
+  {
+    "id": 11,
+    "name": "PVC Pipes",
+    "category": "Plumbing",
+    "vendor": "Supreme Industries",
+    "price": 180,
+    "unit": "meter",
+    "availability": "In Stock",
+    "image": "pvcpipes.png",
+    "description": "Durable PVC pipes for water supply and drainage systems"
+  },
+  {
+    "id": 12,
+    "name": "Electrical Wires",
+    "category": "Electrical",
+    "vendor": "Havells",
+    "price": 850,
+    "unit": "coil (90m)",
+    "availability": "In Stock",
+    "image": "electricalwires.png",
+    "description": "Copper electrical wires with PVC insulation"
+  },
+  {
+    "id": 13,
+    "name": "Gypsum Boards",
+    "category": "Drywall",
+    "vendor": "Saint-Gobain",
+    "price": 320,
+    "unit": "sq ft",
+    "availability": "In Stock",
+    "image": "materials.jpg",
+    "description": "Fire-resistant gypsum boards for interior partitions"
+  },
+  {
+    "id": 14,
+    "name": "Roofing Sheets",
+    "category": "Roofing",
+    "vendor": "JSW Steel",
+    "price": 450,
+    "unit": "sq ft",
+    "availability": "In Stock",
+    "image": "materials.jpg",
+    "description": "Corrugated galvanized steel roofing sheets"
+  },
+  {
+    "id": 15,
+    "name": "Marble Flooring",
+    "category": "Tiles & Flooring",
+    "vendor": "Italian Marble",
+    "price": 180,
+    "unit": "sq ft",
+    "availability": "Limited Stock",
+    "image": "tiles.jpg",
+    "description": "Premium Italian marble tiles for luxury flooring"
+  }
+]

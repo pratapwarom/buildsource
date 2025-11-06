@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Material Sourcing",
+    "description": "Compare suppliers and schedule deliveries."
+  },
+  {
+    "id": 2,
+    "title": "Professional Hiring",
+    "description": "Hire vetted architects, masons and electricians."
+  },
+  {
+    "id": 3,
+    "title": "Project Management",
+    "description": "Shared timelines, budgets and milestones."
+  },
+  {
+    "id": 4,
+    "title": "Cost Estimation",
+    "description": "Quick estimates and package pricing."
+  }
+]

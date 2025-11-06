@@ -1,0 +1,36 @@
+<%- include('partials/head', { title: 'Pricing' }) %>
+<%- include('partials/header') %>
+
+<section class="pricing-section">
+  <div class="container">
+    <div class="section-header">
+      <h1>Our Pricing</h1>
+      <p class="muted">
+        Transparent rates for materials, skilled labor, and turnkey renovation packages.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <% pricing.forEach(cat => { %>
+        <article class="pricing-card" data-aos="fade-up">
+          <div class="pricing-img">
+            <img src="<%= cat.image %>" alt="<%= cat.category %>" loading="lazy">
+            <div class="overlay">
+              <h3><%= cat.category %></h3>
+            </div>
+          </div>
+          <ul class="pricing-list">
+            <% cat.items.forEach(i => { %>
+              <li>
+                <span class="item-name"><%= i.name %></span>
+                <span class="item-price"><%= i.price %></span>
+              </li>
+            <% }) %>
+          </ul>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

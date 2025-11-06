@@ -1,0 +1,44 @@
+[
+  {
+    "category": "Materials",
+    "image": "/assets/materials.jpg",
+    "items": [
+      {
+        "name": "Cement 50kg",
+        "price": "₹550"
+      },
+      {
+        "name": "Porcelain Tiles (Box)",
+        "price": "₹1200"
+      }
+    ]
+  },
+  {
+    "category": "Labor",
+    "image": "/assets/labours.jpg",
+    "items": [
+      {
+        "name": "Mason (per day)",
+        "price": "₹1200"
+      },
+      {
+        "name": "Electrician (per day)",
+        "price": "₹1000"
+      }
+    ]
+  },
+  {
+    "category": "Packages",
+    "image": "/assets/packeges.jpg",
+    "items": [
+      {
+        "name": "Kitchen Remodel (mini)",
+        "price": "₹150000"
+      },
+      {
+        "name": "Bathroom Remodel (standard)",
+        "price": "₹80000"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "2BHK Renovation",
+    "summary": "Kitchen & bathroom remodel",
+    "budget": "₹6L",
+    "status": "Completed",
+    "image": "/assets/2bhk.jpg"
+  },
+  {
+    "id": 2,
+    "title": "New House Build",
+    "summary": "3 story, 2400 sqft",
+    "budget": "₹45L",
+    "status": "In progress",
+    "image": "/assets/housebuild.jpg"
+  }
+]
