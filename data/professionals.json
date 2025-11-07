@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Rajesh Kumar",
+    "category": "Architect",
+    "experience": "10 years",
+    "rating": 4.8,
+    "location": "Mumbai",
+    "description": "Specializes in modern residential designs with sustainable materials.",
+    "contact": "rajesh.architect@example.com",
+    "phone": "+91-9876543210"
+  },
+  {
+    "id": 2,
+    "name": "Suresh Patel",
+    "category": "Mason",
+    "experience": "15 years",
+    "rating": 4.9,
+    "location": "Delhi",
+    "description": "Expert in brickwork, plastering, and concrete construction.",
+    "contact": "suresh.mason@example.com",
+    "phone": "+91-9876543211"
+  },
+  {
+    "id": 3,
+    "name": "Amit Sharma",
+    "category": "Electrician",
+    "experience": "8 years",
+    "rating": 4.7,
+    "location": "Bangalore",
+    "description": "Certified electrician with expertise in home wiring and solar installations.",
+    "contact": "amit.electric@example.com",
+    "phone": "+91-9876543212"
+  },
+  {
+    "id": 4,
+    "name": "Priya Singh",
+    "category": "Interior Designer",
+    "experience": "12 years",
+    "rating": 4.9,
+    "location": "Pune",
+    "description": "Creates beautiful, functional interiors with attention to detail.",
+    "contact": "priya.design@example.com",
+    "phone": "+91-9876543213"
+  },
+  {
+    "id": 5,
+    "name": "Vikram Rao",
+    "category": "Plumber",
+    "experience": "9 years",
+    "rating": 4.6,
+    "location": "Chennai",
+    "description": "Skilled in plumbing installations, repairs, and water system design.",
+    "contact": "vikram.plumber@example.com",
+    "phone": "+91-9876543214"
+  },
+  {
+    "id": 6,
+    "name": "Kavita Mehta",
+    "category": "Carpenter",
+    "experience": "11 years",
+    "rating": 4.8,
+    "location": "Ahmedabad",
+    "description": "Specializes in custom furniture and woodwork for homes.",
+    "contact": "kavita.carpenter@example.com",
+    "phone": "+91-9876543215"
+  }
+]

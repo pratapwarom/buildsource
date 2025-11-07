@@ -1,0 +1,38 @@
+<%- include('partials/head', { title: 'Hire Professionals' }) %>
+<%- include('partials/header') %>
+
+<section class="hire-section">
+  <div class="container">
+    <div class="section-header">
+      <h1>Hire Professionals</h1>
+      <p class="muted">Connect with vetted architects, masons, electricians, and more for your construction needs.</p>
+    </div>
+
+    <div class="professionals-grid">
+      <% professionals.forEach(p => { %>
+        <article class="professional-card" data-aos="fade-up">
+          <div class="professional-header">
+            <h3><%= p.name %></h3>
+            <span class="category"><%= p.category %></span>
+          </div>
+          <div class="rating">
+            <% for (let i = 0; i < 5; i++) { %>
+              <i class="fa-solid fa-star <%= i < Math.floor(p.rating) ? 'filled' : '' %>"></i>
+            <% } %>
+            <span><%= p.rating %></span>
+          </div>
+          <p class="experience"><%= p.experience %> experience</p>
+          <p class="location"><i class="fa-solid fa-map-marker-alt"></i> <%= p.location %></p>
+          <p class="description"><%= p.description %></p>
+          <div class="contact-info">
+            <p><i class="fa-solid fa-envelope"></i> <%= p.contact %></p>
+            <p><i class="fa-solid fa-phone"></i> <%= p.phone %></p>
+          </div>
+          <a href="/contact" class="btn">Contact Professional</a>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

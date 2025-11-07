@@ -58,6 +58,10 @@ app.get('/materials', (req, res) => {
   const materials = loadJSON('materials.json');
   res.render('materials', { title: 'Materials', materials: materials || [], user: req.session.user });
 });
+app.get('/hire', (req, res) => {
+  const professionals = loadJSON('professionals.json');
+  res.render('hire', { title: 'Hire Professionals', professionals: professionals || [], user: req.session.user });
+});
 app.get('/contact', (req, res) => res.render('contact', { title: 'Contact', user: req.session.user }));
 
 app.get('/api/services', (req, res) => {

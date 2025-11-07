@@ -1,0 +1,148 @@
+/* Hire Professionals Section */
+.hire-section {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.professionals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.professional-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.professional-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.professional-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.professional-header h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.category {
+  background: rgba(0, 85, 165, 0.1);
+  color: var(--brand);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.rating i {
+  color: #fbbf24;
+  font-size: 1rem;
+}
+
+.rating i.filled {
+  color: #fbbf24;
+}
+
+.rating span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.experience {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.location i {
+  margin-right: 5px;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+}
+
+/* Dark theme hire professionals */
+.dark .hire-section {
+  background: #0f172a;
+}
+
+.dark .professional-card {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark .professional-header h3 {
+  color: #f1f5f9;
+}
+
+.dark .category {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+}
+
+.dark .rating span {
+  color: #94a3b8;
+}
+
+.dark .experience,
+.dark .location {
+  color: #94a3b8;
+}
+
+.dark .description {
+  color: #cbd5e1;
+}
+
+.dark .contact-info p {
+  color: #94a3b8;
+}
