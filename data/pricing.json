@@ -1,43 +1,64 @@
 [
   {
+    "id": 1,
     "category": "Materials",
-    "image": "/assets/materials.jpg",
     "items": [
       {
-        "name": "Cement 50kg",
-        "price": "₹550"
+        "name": "Cement",
+        "price": 450,
+        "unit": "bag"
       },
       {
-        "name": "Porcelain Tiles (Box)",
-        "price": "₹1200"
+        "name": "Sand",
+        "price": 1200,
+        "unit": "cubic ft"
+      },
+      {
+        "name": "Aggregate",
+        "price": 1800,
+        "unit": "cubic ft"
       }
     ]
   },
   {
+    "id": 2,
     "category": "Labor",
-    "image": "/assets/labours.jpg",
     "items": [
       {
-        "name": "Mason (per day)",
-        "price": "₹1200"
+        "name": "Mason",
+        "price": 800,
+        "unit": "day"
       },
       {
-        "name": "Electrician (per day)",
-        "price": "₹1000"
+        "name": "Helper",
+        "price": 400,
+        "unit": "day"
+      },
+      {
+        "name": "Electrician",
+        "price": 600,
+        "unit": "day"
       }
     ]
   },
   {
+    "id": 3,
     "category": "Packages",
-    "image": "/assets/packeges.jpg",
     "items": [
       {
-        "name": "Kitchen Remodel (mini)",
-        "price": "₹150000"
+        "name": "Basic Construction Package",
+        "price": 2500,
+        "unit": "sq ft"
       },
       {
-        "name": "Bathroom Remodel (standard)",
-        "price": "₹80000"
+        "name": "Premium Construction Package",
+        "price": 3500,
+        "unit": "sq ft"
+      },
+      {
+        "name": "Complete Home Build",
+        "price": 1800,
+        "unit": "sq ft"
       }
     ]
   }

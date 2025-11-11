@@ -1,0 +1,139 @@
+/* Services Page Styles */
+.services-section {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.services-section .container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+}
+
+.services-section .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.services-section .section-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.services-section .section-header .muted {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-hover) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.service-card:hover .icon-circle {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 85, 165, 0.3);
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.service-card p {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Responsive styles for services */
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .services-section .section-header h1 {
+    font-size: 2rem;
+  }
+
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Dark theme services */
+.dark .services-section {
+  background: #0f172a;
+}
+
+.dark .services-section .section-header h1 {
+  color: #f1f5f9;
+}
+
+.dark .services-section .section-header .muted {
+  color: #94a3b8;
+}
+
+.dark .service-card {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+.dark .service-card h3 {
+  color: var(--text-primary);
+}
+
+.dark .service-card p {
+  color: var(--muted);
+}

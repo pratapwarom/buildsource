@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title><%= title ? `${title} | BuildSource` : 'BuildSource — Construction & Renovation Platform' %></title>
+  <!-- <title><%= title ? `${title} | BuildSource` : 'BuildSource — Construction & Renovation Platform' %></title> -->
   <meta name="description" content="BuildSource is your all-in-one construction and renovation platform — connecting homeowners, contractors, and suppliers for a seamless building experience." />
   <meta name="keywords" content="BuildSource, construction, renovation, building materials, contractors, home improvement" />
   <meta name="author" content="BuildSource Team" />
@@ -28,12 +28,32 @@
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0e9b6e1.js" crossorigin="anonymous"></script>
+  <script src="/js/fontawesome.min.js"></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
   <% if (title === 'Hire Professionals') { %>
     <link rel="stylesheet" href="/css/hire.css" />
+  <% } %>
+  <% if (title === 'Materials') { %>
+    <link rel="stylesheet" href="/css/materials.css" />
+  <% } %>
+  <% if (title === 'Contact') { %>
+    <link rel="stylesheet" href="/css/contact.css" />
+  <% } %>
+  <% if (title === 'Pricing') { %>
+    <link rel="stylesheet" href="/css/pricing.css" />
+  <% } %>
+  <% if (title === 'Services') { %>
+    <link rel="stylesheet" href="/css/services.css" />
+  <% } %>
+  <% if (title === 'Projects') { %>
+    <link rel="stylesheet" href="/css/projects.css" />
+  <% } %>
+  <% if (typeof css !== 'undefined') { %>
+    <link rel="stylesheet" href="/css/<%= css %>" />
   <% } %>
 
   <!-- Theme Color for Mobile -->

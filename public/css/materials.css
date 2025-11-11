@@ -1,0 +1,370 @@
+/* =========================================
+   MATERIALS PAGE STYLES
+   ========================================= */
+
+/* Section Intro */
+.section-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   SEARCH BAR
+   ========================================= */
+.search-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem 1.2rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px rgba(0, 85, 165, 0.15);
+  transform: translateY(-1px);
+}
+
+.search-btn {
+  padding: 1rem 2rem;
+  background: var(--muted);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+}
+
+.search-btn:hover {
+  background: var(--text-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Dark Theme - Search Bar */
+.dark .search-input {
+  background: var(--card);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+.dark .search-input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+.dark .search-btn {
+  background: var(--muted);
+  color: white;
+}
+
+.dark .search-btn:hover {
+  background: var(--text-secondary);
+}
+
+/* =========================================
+   MATERIALS GRID
+   ========================================= */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   MATERIAL CARD
+   ========================================= */
+.material-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.material-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* =========================================
+   MATERIAL IMAGE
+   ========================================= */
+.material-image {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.material-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1) contrast(1.05);
+}
+
+.material-card:hover .material-image img {
+  transform: scale(1.08);
+  filter: brightness(1.1) contrast(1.1) saturate(1.1);
+}
+
+/* Image Overlay Gradient */
+.material-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.material-card:hover .material-image::before {
+  opacity: 1;
+}
+
+/* =========================================
+   AVAILABILITY BADGES
+   ========================================= */
+.availability-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.availability-badge.in-stock {
+  background: #22c55e;
+  color: white;
+}
+
+.availability-badge.limited-stock {
+  background: #f59e0b;
+  color: white;
+}
+
+.availability-badge.custom-order {
+  background: #8b5cf6;
+  color: white;
+}
+
+/* =========================================
+   MATERIAL CONTENT
+   ========================================= */
+.material-content {
+  padding: 1.5rem;
+}
+
+.material-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.material-description {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.material-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.material-meta .category {
+  background: rgba(0, 85, 165, 0.1);
+  color: var(--brand);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.material-meta .vendor {
+  color: var(--muted);
+}
+
+/* =========================================
+   MATERIAL PRICE
+   ========================================= */
+.material-price {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.material-price .price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.material-price .unit {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-left: 4px;
+}
+
+/* =========================================
+   ADMIN ACTION BUTTONS
+   ========================================= */
+.admin-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn-accept {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-accept:hover {
+  background: #16a34a;
+}
+
+.btn-reject {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-reject:hover {
+  background: #dc2626;
+}
+
+/* =========================================
+   DARK THEME STYLES
+   ========================================= */
+.dark .section-intro {
+  color: #94a3b8;
+}
+
+.dark .material-content h3 {
+  color: #f1f5f9;
+}
+
+.dark .material-description {
+  color: #cbd5e1;
+}
+
+.dark .material-meta .category {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+}
+
+.dark .material-meta .vendor {
+  color: #94a3b8;
+}
+
+/* =========================================
+   RESPONSIVE STYLES
+   ========================================= */
+@media (max-width: 1024px) {
+  .material-image {
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .materials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .material-card {
+    max-width: 100%;
+  }
+
+  .material-image {
+    height: 200px;
+  }
+
+  .material-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .material-description {
+    font-size: 0.85rem;
+  }
+
+  .material-price .price {
+    font-size: 1.2rem;
+  }
+
+  .material-price .unit {
+    font-size: 0.8rem;
+  }
+
+  .material-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .availability-badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .material-image {
+    height: 160px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+}

@@ -19,5 +19,12 @@
     "password": "$2b$10$YhNqsY1rmOTv6qEU1VfbZeLz090cmjNhLKnzRI.EZdI53piIH8uxK",
     "role": "admin",
     "name": "OM PRATAPWAR"
+  },
+  {
+    "id": 4,
+    "email": "pratapwarom2908@gmail.com",
+    "password": "$2b$10$C8x2EcgusFC/2qg93vLwzugTZPJsVHCZQwl.RouW.lqCCPVpJibpq",
+    "role": "user",
+    "name": "OM PRATAPWAR"
   }
 ]

@@ -1,0 +1,130 @@
+<%- include('partials/head', { title: 'Construction Cost Prediction', css: 'predict.css' }) %>
+<%- include('partials/header') %>
+
+<section class="container predict-page">
+  <h1>Construction Cost Prediction</h1>
+  <p class="section-intro">Get accurate cost estimates for your construction project using our AI-powered prediction tool</p>
+
+  <!-- Step Indicator -->
+  <div class="step-indicator">
+    <div class="step active" id="step1">
+      <div class="step-number">1</div>
+      <div class="step-text">Project Details</div>
+    </div>
+    <div class="step pending" id="step2">
+      <div class="step-number">2</div>
+      <div class="step-text">Material Selection</div>
+    </div>
+    <div class="step pending" id="step3">
+      <div class="step-number">3</div>
+      <div class="step-text">Cost Estimation</div>
+    </div>
+  </div>
+
+  <div class="predict-container">
+    <form id="predictionForm" class="prediction-form">
+      <!-- Step 1: Project Details -->
+      <div class="form-section" id="step1-content">
+        <h3>Step 1: Project Details</h3>
+        <p class="form-note">Tell us about your construction project to get started</p>
+
+        <div class="form-row">
+          <label>
+            Project Type
+            <select id="projectType" name="projectType" required>
+              <option value="">Select project type</option>
+              <option value="residential">Residential Building</option>
+              <option value="commercial">Commercial Building</option>
+              <option value="renovation">Renovation/Remodel</option>
+              <option value="extension">Home Extension</option>
+            </select>
+          </label>
+          <label>
+            Total Area (sq ft)
+            <input type="number" id="area" name="area" min="100" max="10000" placeholder="Enter area in square feet" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            Number of Floors
+            <select id="floors" name="floors" required>
+              <option value="">Select floors</option>
+              <option value="1">1 Floor (Ground)</option>
+              <option value="2">2 Floors (G+1)</option>
+              <option value="3">3 Floors (G+2)</option>
+              <option value="4">4 Floors (G+3)</option>
+            </select>
+          </label>
+          <label>
+            Quality Standard
+            <select id="quality" name="quality" required>
+              <option value="">Select quality</option>
+              <option value="basic">Basic (Budget)</option>
+              <option value="standard">Standard</option>
+              <option value="premium">Premium</option>
+              <option value="luxury">Luxury</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="nextToMaterials" class="btn btn-primary">Next: Select Materials</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Material Selection -->
+      <div class="form-section" id="step2-content" style="display: none;">
+        <h3>Step 2: Material Selection</h3>
+        <p class="form-note">Choose the materials you want to include in your cost estimation</p>
+        <div class="materials-grid" id="materialsGrid">
+          <!-- Materials will be loaded dynamically -->
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="backToDetails" class="btn btn-secondary">Back</button>
+          <button type="button" id="predictBtn" class="btn btn-primary">
+            <span class="btn-text">Predict Cost</span>
+            <span class="btn-loading" style="display: none;">Analyzing...</span>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div id="resultsSection" class="results-section" style="display: none;">
+      <h3>Cost Estimation Results</h3>
+
+      <div class="results-summary">
+        <div class="total-cost">
+          <h4>Total Estimated Cost</h4>
+          <div class="cost-amount" id="totalCost">₹0</div>
+          <p class="cost-range" id="costRange"></p>
+        </div>
+      </div>
+
+      <div class="cost-breakdown">
+        <h4>Detailed Breakdown</h4>
+        <div class="breakdown-grid" id="breakdownGrid">
+          <!-- Cost breakdown will be populated here -->
+        </div>
+      </div>
+
+      <div class="recommendations">
+        <h4>Recommendations</h4>
+        <ul id="recommendationsList">
+          <!-- Recommendations will be populated here -->
+        </ul>
+      </div>
+
+      <div class="action-buttons">
+        <button id="saveQuoteBtn" class="btn btn-success">Save as Quote</button>
+        <button id="printBtn" class="btn btn-outline">Print Estimate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+<script src="/js/predict.js"></script>

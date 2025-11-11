@@ -5,6 +5,12 @@
   <h1>Materials Marketplace</h1>
   <p class="section-intro">Browse our comprehensive collection of construction materials from trusted vendors. All materials are quality-assured and available for immediate delivery.</p>
 
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input type="text" id="material-search" placeholder="Search materials by name, description, category, or vendor..." class="search-input">
+    <button class="btn search-btn" onclick="clearSearch()">Clear</button>
+  </div>
+
   <div class="materials-grid">
     <% materials.forEach(m => { %>
       <div class="material-card">
@@ -25,7 +31,14 @@
             <span class="price">₹<%= m.price %></span>
             <span class="unit">/ <%= m.unit %></span>
           </div>
-          <button class="btn" onclick="requestQuote(<%= m.id %>)">Request Quote</button>
+          <% if (user && user.role === 'admin') { %>
+            <div class="admin-actions">
+              <button class="btn btn-accept" onclick="acceptQuote(<%= m.id %>)">Accept Quote</button>
+              <button class="btn btn-reject" onclick="rejectQuote(<%= m.id %>)">Reject Quote</button>
+            </div>
+          <% } else { %>
+            <button class="btn" onclick="requestQuote(<%= m.id %>)">Request Quote</button>
+          <% } %>
         </div>
       </div>
     <% }) %>

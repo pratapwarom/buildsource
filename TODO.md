@@ -1,8 +1,5 @@
-# TODO: Add Hiring Professionals Page
+# TODO: Add Search Bar to Materials Page
 
-- [ ] Create data/professionals.json with sample professionals data (categories like architects, masons, electricians, etc.)
-- [ ] Add a new route /hire in server.js to render the hiring page with professionals data
-- [ ] Create views/hire.ejs to display a list of professionals, possibly with categories and contact options
-- [ ] Update views/partials/header.ejs to add a "Hire Professionals" link in the navigation
-- [ ] Run the server and test the new /hire page
-- [ ] Ensure styling and responsiveness
+- [x] Add search bar HTML to views/materials.ejs
+- [x] Add CSS styles for the search bar in public/css/styles.css
+- [x] Add JavaScript functionality to public/js/main.js for filtering materials

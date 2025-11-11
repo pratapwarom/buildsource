@@ -1,0 +1,171 @@
+/* Pricing Page Styles */
+.pricing-section {
+  padding: 90px 0;
+  background: var(--bg);
+}
+
+.pricing-section .container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+}
+
+.pricing-section .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.pricing-section .section-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.pricing-section .section-header .muted {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- Pricing Grid --- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  justify-content: center;
+}
+
+/* Responsive styles for pricing grid */
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .pricing-card {
+    max-width: 100%;
+  }
+
+  .pricing-list li {
+    padding: 8px 0;
+  }
+
+  .pricing-img .overlay h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- Pricing Card --- */
+.pricing-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* --- Image Section --- */
+.pricing-img {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.pricing-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pricing-card:hover img {
+  transform: scale(1.08);
+}
+
+/* --- Overlay Title --- */
+.pricing-img .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.pricing-img .overlay h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* --- Pricing List --- */
+.pricing-list {
+  list-style: none;
+  margin: 0;
+  padding: 20px 25px;
+}
+
+.pricing-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pricing-list li:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.item-price {
+  font-weight: 600;
+  color: var(--brand);
+  background: rgba(0, 85, 165, 0.05);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* --- Dark Mode --- */
+.dark .pricing-section {
+  background: #0f172a;
+}
+
+.dark .pricing-section .section-header h1 {
+  color: #f1f5f9;
+}
+
+.dark .pricing-section .section-header .muted {
+  color: #94a3b8;
+}
+
+.dark .pricing-card {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark .item-name {
+  color: #f8fafc;
+}
+
+.dark .item-price {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+}

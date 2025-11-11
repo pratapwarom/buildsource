@@ -1,0 +1,59 @@
+<%- include('partials/head', { title: 'Quote Requests' }) %>
+<%- include('partials/header') %>
+
+<section class="container">
+  <h1>Quote Requests</h1>
+  <p class="section-intro">Manage incoming quote requests from customers. View details, approve or reject requests.</p>
+
+  <% if (quotes.length === 0) { %>
+    <p>No quote requests yet.</p>
+  <% } else { %>
+    <div class="quotes-list">
+      <% quotes.forEach(quote => { %>
+        <div class="quote-card">
+          <div class="quote-header">
+            <h3>Quote #<%= quote.id %></h3>
+            <span class="status <%= quote.status %>"><%= quote.status %></span>
+          </div>
+          <div class="quote-details">
+            <p><strong>Material:</strong> <%= quote.material %></p>
+            <p><strong>Customer:</strong> <%= quote.name %> (<%= quote.email %>)</p>
+            <p><strong>Requested:</strong> <%= new Date(quote.timestamp).toLocaleString() %></p>
+            <% if (quote.reason) { %>
+              <p><strong>Rejection Reason:</strong> <%= quote.reason %></p>
+            <% } %>
+          </div>
+          <div class="quote-actions">
+            <% if (quote.status === 'pending') { %>
+              <button class="btn btn-approve" onclick="updateQuoteStatus(<%= quote.id %>, 'approved')">Approve</button>
+              <button class="btn btn-reject" onclick="updateQuoteStatus(<%= quote.id %>, 'rejected')">Reject</button>
+            <% } else { %>
+              <span class="status-text"><%= quote.status %></span>
+            <% } %>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+</section>
+
+<%- include('partials/footer') %>
+
+<script>
+function updateQuoteStatus(quoteId, status) {
+  fetch('/api/update-quote-status', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ quoteId, status })
+  })
+  .then(r => r.json())
+  .then(j => {
+    if (j.success) {
+      location.reload();
+    } else {
+      alert('Failed to update status');
+    }
+  })
+  .catch(() => alert('Error updating status'));
+}
+</script>

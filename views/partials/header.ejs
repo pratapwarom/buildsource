@@ -14,7 +14,12 @@
       <a href="/hire" class="nav-link">Hire Professionals</a>
       <a href="/projects" class="nav-link">Projects</a>
       <a href="/materials" class="nav-link">Materials</a>
-      <a href="/pricing" class="nav-link">Pricing</a>
+      <a href="/predict" class="nav-link">Cost Predict</a>
+      <% if (locals.user && locals.user.role === 'admin') { %>
+        <a href="/pricing" class="nav-link">Pricing</a>
+        <a href="/admin/quotes" class="nav-link">Quotes</a>
+      <% } %>
+    
       <% if (!locals.user) { %>
         <a href="/signin" class="btn-outline">Sign In</a>
       <% } else { %>
